@@ -12,4 +12,97 @@
  *
  *= require_tree .
  *= require_self
+ *= libs/font-awesome
  */
+
+html, body {
+	height: 100%;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.get_started {
+	margin-top: 30px
+}
+
+.absolute_center {
+	width: 50%;
+    margin: 0 auto; 
+}
+
+.main_container {
+	height:100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.loader {
+	display: inline-block; align-self: center;
+}
+
+.home_panel {
+	text-align: center;
+	margin: 100px;
+}
+
+.visual_nav{
+	margin-left: 20px
+}
+
+.m10 {
+	margin: 20px;
+}
+
+.m5 {
+	margin: px;
+}
+
+.event_checkbox {
+	max-height: 500px;
+	overflow-x: hidden;
+	background: #fff;
+}
+
+@media (min-width: 768px) {
+	.navbar-collapse {
+		height: auto;
+		border-top: 0;
+		box-shadow: none;
+		max-height: none;
+		padding-left:0;
+		padding-right:0;
+	}
+
+	.navbar-collapse.collapse {
+		display: block !important;
+		width: auto !important;
+		padding-bottom: 0;
+		overflow: visible !important;
+	}
+
+	.navbar-collapse.in {
+		overflow-x: visible;
+	}
+
+	.navbar {
+		
+		margin-right: 0;
+		margin-left: 0;
+	}	
+
+	.navbar-nav, .navbar-nav > li, .navbar-left, .navbar-right, .navbar-header {
+		float:none !important;
+	}
+
+	.navbar-right .dropdown-menu {
+		left:0;
+		right:auto;
+	}
+
+	.navbar-collapse .navbar-nav.navbar-right:last-child {
+		margin-right: 0;
+	}
+}

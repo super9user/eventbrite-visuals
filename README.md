@@ -7,7 +7,7 @@ Make sure you checkout the screenshots of the application.
 
 Eventbrite is a wonderful platform where people can find and create their favorite events.
 
-This application helps users to see overlapping events so that they can plan better and optimize their schedule so that can attend maximum number of events!!
+This application helps users to see overlapping events so that they can plan better and optimize their schedule so that users can attend maximum number of events!!
 This application also provides event capacity information.
 
 `Future Scope` of this application would be to display vacant capacity of the events to the visualization and add location parameter to the filters, so that users can make even better decisions.

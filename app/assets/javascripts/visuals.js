@@ -47,11 +47,13 @@ $(document).ready(function(){
 	});
 
 	var limit = 5;
-	$('document').on('change', '.single_checkbox', function(evt) {
-		if($(this).siblings(':checked').length >= limit) {
+	$(document).on('change', '.single_checkbox', function(evt) {
+		var siblings = $(this).closest('.event_checkbox').find('.single_checkbox');
+		var len = _.select(siblings, function(s){
+			return $(s).attr("checked") == "checked";
+		}).length;
+		if(len >= limit) {
 			this.checked = false;
-		}else{
-
 		}
 	});
 

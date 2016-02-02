@@ -25,7 +25,6 @@ class HomeController < ActionController::Base
 			end
 			hash["timestamp_values"] << end_timestamp
 			hash["capacity"] = event["capacity"]
-			p hash["timestamp_values"]
 			arr << hash
 		end
 		render json: arr

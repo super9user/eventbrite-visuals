@@ -4,6 +4,7 @@ event_comparison = function(data){
 	var _i = {};
 	_i.data = data;
 	_i.process = function(){
+		// Processor function for this report. Converts input data into required form.
 		var series_data = [];
 		var count = 0;
 		_.each(_i.data, function(obj){
@@ -42,6 +43,7 @@ event_comparison = function(data){
 	};
 
 	_i.generate = function(){
+		// Main generator function
 		Highcharts.setOptions({
 			global: {
 				useUTC: true
@@ -56,6 +58,7 @@ event_comparison = function(data){
 	};
 
 	_i.render_chart = function(){
+		// This function is responsible for rendering the visualization using Highcharts.
 		try{
 			_i.process();
 			_i.chart = $('.main_container .reports').highcharts('StockChart', {

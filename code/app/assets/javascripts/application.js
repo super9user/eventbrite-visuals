@@ -22,6 +22,7 @@
 
 
 $(document).ready(function(){
+	// common daterangepicker initialize function for the app
 	$('.datepicker-container input[name="daterange"]').daterangepicker({
 		format: 'MM/DD/YYYY',
 		startDate: moment().subtract("month", 3).format("MM/DD/YYYY"),
@@ -53,6 +54,7 @@ $(document).ready(function(){
 
 });
 
+// return the query parameters as a JSON variable
 function getJsonFromUrl() {
 	var query = location.search.substr(1);
 	var result = {};

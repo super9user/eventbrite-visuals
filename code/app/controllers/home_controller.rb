@@ -15,10 +15,13 @@ class HomeController < ActionController::Base
 			start_date = Time.parse(start_date).beginning_of_day
 			end_date = Time.parse(end_date).beginning_of_day
 
+			# convert date to its equivalent integer timestamp
 			start_timestamp = (start_date.to_f*1000).to_i
 			end_timestamp = (end_date.to_f*1000).to_i
 			hash["timestamp_values"] =[]
 			hash["timestamp_values"] << start_timestamp
+
+			# 86400000 is the integer timestamp for 24hrs
 			while(end_timestamp - start_timestamp > 86400000)
 				start_timestamp = start_timestamp + 86400000
 				hash["timestamp_values"] << start_timestamp	
@@ -32,6 +35,7 @@ class HomeController < ActionController::Base
 
 	private
 	def build_search_query
+		# build search query from input parameters
 		search_query = {}
 		if(params['daterange'].present?)
 			start_date = params['daterange'].split("-")[0].strip
@@ -40,6 +44,7 @@ class HomeController < ActionController::Base
 			start_date = Date.strptime(start_date, "%m/%d/%Y")
 			end_date = Date.strptime(end_date, "%m/%d/%Y")
 
+			# convert input date to a valid format
 			search_query['start_date.range_start'] = start_date.strftime("%Y-%m-%dT%I:%M:%S")
 			search_query['start_date.range_end'] = end_date.strftime("%Y-%m-%dT%I:%M:%S")
 		end

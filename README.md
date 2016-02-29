@@ -48,7 +48,6 @@ Tanmay Patil
 
 Copyright 2016 Tanmay Patil
 
-@author   Tanmay Patil
 
 mailto: tanmay.ashok.patil@gmail.com
 

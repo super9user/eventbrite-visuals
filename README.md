@@ -46,5 +46,14 @@ Pull code from github.
 Tanmay Patil
 
 
+Copyright 2016 Tanmay Patil
+
+@author   Tanmay Patil
+
+mailto: tanmay.ashok.patil@gmail.com
+
+@version Feb 01, 2016
+
+
 </content>
 </snippet>
